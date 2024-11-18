@@ -283,7 +283,7 @@ body {
   margin: 15px;
 }
 
-/*----------------------------------------------------- navbar -----------------------------------------------------*/
+/*----------------------------------------------------- overview -----------------------------------------------------*/
 
 #education {
   margin-top: 70px;
@@ -341,10 +341,53 @@ body {
   text-decoration: underline;
 }
 
-/* footer */
+/*----------------------------------------------------- overview -----------------------------------------------------*/
 
-#footer {
-  height: 20vh;
+#work-cont {
+  margin-top: 50px;
   width: 100%;
-  float: bottom;
+  min-height: 200px;
 }
+
+#work-title {
+  margin-left: 15%;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 22px;
+  font-family: 'Poppins';
+  font-weight: 400px;
+  /* color: #252B42; */
+  color: rgb(1, 1, 1);
+  padding-bottom: 25px;
+}
+
+#work-subtitle {
+  margin-left: 15%;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  font-family: 'Poppins';
+  font-weight: 400px;
+  /* color: #252B42; */
+  color: rgb(1, 1, 1);
+  padding-bottom: 10px;
+}
+
+#jobs-outer-cont {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 15px;
+}
+
+#job-cont {
+  width: 80%;
+  min-height: 100px;
+  background-color: #e9f0ea;
+  border-radius: 15px;
+  max-width: 950px;
+}
+
+/* ------------ footer ------------------- */

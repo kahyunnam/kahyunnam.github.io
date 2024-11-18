@@ -36,7 +36,7 @@ const HomePage = () => {
     );
   };
 
-  const Education = () => {
+  const Overview = () => {
     return (
       <div id='education' class='row'>
         <div id='education-content'>
@@ -85,10 +85,43 @@ const HomePage = () => {
     );
   };
 
+  const Work = () => {
+    return (
+      <div id='work-cont'>
+        <div id='work-title'> Work Experience </div>
+        <div id='jobs-outer-cont'>
+          <div id='job-cont'></div>
+          <div id='job-cont'></div>
+          <div id='job-cont'></div>
+          <div id='job-cont'></div>
+        </div>
+      </div>
+    );
+  };
+
+  const Education = () => {
+    return (
+      <div id='work-cont'>
+        <div id='work-title'> Education </div>
+      </div>
+    );
+  };
+
+  const Contact = () => {
+    return (
+      <div id='work-cont'>
+        <div id='work-title'> Contact Information </div>
+      </div>
+    );
+  };
+
   return (
     <div id='page'>
       <Heading />
+      <Overview />
+      <Work />
       <Education />
+      <Contact />
     </div>
   );
 };
