@@ -1,0 +1,350 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+.row {
+  display: flex; /* equal height of the children */
+
+  @media (max-width: 800px) {
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+}
+
+.col {
+  flex: 1; /* additionally, equal width */
+
+  @media (max-width: 800px) {
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+}
+
+.col-2 {
+  flex: 1.7; /* additionally, equal width */
+
+  @media (min-width: 1200px) {
+    flex: 1.5;
+  }
+}
+
+body {
+  height: 100vh;
+  width: 100%;
+  background-color: #fbfafd;
+}
+
+/*navbar */
+
+#navbar-cont {
+  padding-top: 10px;
+  display: flex;
+  font-family: 'Poppins';
+  font-style: normal;
+
+  text-align: left;
+  width: 100%;
+  height: 80px;
+
+  display: flex;
+  flex-direction: row;
+  align-items: left;
+  gap: 15px;
+  position: sticky;
+
+  padding-bottom: 50px;
+}
+
+#navbar-text-1 {
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 30px;
+
+  letter-spacing: 0.2px;
+
+  color: #8d8888;
+
+  margin-left: 70px;
+}
+
+#navbar-text {
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 30px;
+
+  letter-spacing: 0.2px;
+
+  color: #8d8888;
+}
+
+#navbar-text:hover {
+  color: #024a76;
+  cursor: pointer;
+}
+
+#navbar-text-1:hover {
+  color: #024a76;
+  cursor: pointer;
+}
+
+/* --------------------------------- heading ---------------------------------*/
+#heading {
+  display: flex;
+  font-family: 'Poppins';
+  font-style: normal;
+
+  text-align: left;
+}
+
+#heading-pic-cont-outer {
+  float: right;
+  width: 30%;
+  position: relative;
+
+  @media (max-width: 800px) {
+    float: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding-bottom: 20px;
+  }
+}
+
+#heading-pic-cont {
+  width: 190px;
+  height: 190px;
+
+  margin-top: 10%;
+  margin-bottom: 10%;
+
+  background: url(pics/kahyun.png) no-repeat top;
+  background-size: 190px;
+
+  @media (min-width: 1200px) {
+    width: 210px;
+    height: 210px;
+    background-size: 210px;
+  }
+}
+
+#heading-text-cont {
+  float: left;
+  padding-left: 5%;
+  @media (min-width: 800px) {
+    padding-left: 20%;
+  }
+
+  @media (min-width: 1200px) {
+    width: 80%;
+  }
+}
+
+#big-heading {
+  font-weight: 500;
+  font-size: 45px;
+  line-height: 80px;
+
+  letter-spacing: 0.2px;
+
+  color: #252b42;
+
+  margin: 0;
+  padding-top: 5%;
+
+  @media (max-width: 800px) {
+    padding-top: 0%;
+    font-size: 35px;
+    line-height: 50px;
+    padding-left: 8%;
+    padding-right: 8%;
+  }
+  @media (min-width: 800px) {
+    width: 84%;
+  }
+}
+
+#smol-heading-div {
+  width: 84%;
+  @media (max-width: 800px) {
+    padding-left: 8%;
+    padding-right: 8%;
+  }
+}
+
+#smol-heading {
+  font-weight: 400;
+  font-size: 15px;
+
+  letter-spacing: 0.2px;
+
+  color: #737373;
+
+  margin: 0;
+}
+
+/* sections */
+
+#sections {
+  width: 94%;
+  margin-left: 3%;
+  margin-right: 3%;
+}
+
+#section-container {
+  /* width: 29%;
+  min-width: 240px; */
+  height: 50vh;
+  min-height: 360px;
+
+  border-radius: 20px;
+  margin-top: 5vh;
+  margin-bottom: 5vh;
+
+  background: #ffffff;
+  box-shadow: -2px 2px 15px 7px rgba(219, 213, 225, 0.3);
+}
+
+@media (min-width: 575px) {
+  #section-container {
+    width: 29%;
+    min-width: 240px;
+    margin-right: 2%;
+    margin-left: 2%;
+    float: left;
+  }
+}
+
+@media (max-width: 574px) {
+  #section-container {
+    width: 80%;
+    margin-left: 10%;
+    min-width: 220px;
+    float: left;
+  }
+}
+
+#resumebutton {
+  width: 200px;
+  height: 50px;
+  vertical-align: top;
+  /* background: linear-gradient(110.7deg, #FFFFFF -9.14%, #D9A8FF 136.77%); */
+  /* background: linear-gradient(265.19deg, #764BA2 6.47%, #6C6CD0 57.87%, #667EEA 100.06%); */
+
+  /* background: #8dc4ff; */
+  background: #49724d;
+  border-radius: 200px;
+
+  margin: 10px 0px;
+
+  cursor: pointer;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+#resumebutton:hover {
+  transition: all 0.25s ease-out;
+  width: 210px;
+  height: 51px;
+  /* background: #60a5f0; */
+  background: #628a66;
+}
+
+#resume-div {
+  width: 100%;
+  height: 75px;
+
+  @media (max-width: 800px) {
+    padding-left: 8%;
+    padding-right: 8%;
+  }
+
+  @media (min-width: 800px) {
+    width: 84%;
+  }
+  /* display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center; */
+}
+
+#resumetext {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  font-family: 'Poppins';
+  font-weight: 400px;
+  /* color: #252B42; */
+  color: white;
+  margin: 15px;
+}
+
+/*----------------------------------------------------- navbar -----------------------------------------------------*/
+
+#education {
+  margin-top: 70px;
+  width: 100%;
+  min-height: 300px;
+  background: #dfe7f2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#education-content {
+  margin-top: 30px;
+  margin-bottom: 30px;
+  width: 70%;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+#education-title {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 22px;
+  font-family: 'Poppins';
+  font-weight: 400px;
+  /* color: #252B42; */
+  color: rgb(0, 82, 8);
+  padding-bottom: 10px;
+}
+
+#education-summary {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 15px;
+  font-family: 'Poppins';
+  font-weight: 400px;
+  /* color: #252B42; */
+  color: rgb(0, 82, 8);
+  padding-bottom: 8px;
+}
+
+#link {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 15px;
+  font-family: 'Poppins';
+  font-weight: 700px;
+  /* color: #252B42; */
+  color: rgb(2, 12, 188);
+  padding-bottom: 8px;
+  text-decoration: none;
+}
+
+#link:hover {
+  text-decoration: underline;
+}
+
+/* footer */
+
+#footer {
+  height: 20vh;
+  width: 100%;
+  float: bottom;
+}

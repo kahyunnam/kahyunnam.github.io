@@ -1,25 +1,38 @@
-import logo from './logo.svg';
-import './App.css';
 import React from 'react';
+import ReactDOM from 'react-dom';
+import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
+import HomePage from './home/HomePage.js';
+import './App.css';
+import './home/HomePage.css';
 
 function App() {
+  const NavBar = () => {
+    return (
+      <div id='navbar-cont'>
+        <p id='navbar-text-1'> About </p>
+        <p id='navbar-text'> Education </p>
+        <p id='navbar-text'> Experience </p>
+        <p id='navbar-text'> Contact </p>
+      </div>
+    );
+  };
+
   return (
-    <div className='App'>
-      <header className='App-header'>
-        <img src={logo} className='App-logo' alt='logo' />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className='App-link'
-          href='https://reactjs.org'
-          target='_blank'
-          rel='noopener noreferrer'
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <header></header>
+      <NavBar />
+      <Router>
+        <Routes>
+          {/* <Route path="/work_experience">
+            <WorkExp />
+          </Route>
+          <Route path="/projects">
+            <Projects />
+          </Route> */}
+          <Route path='/' element={<HomePage />} />
+        </Routes>
+      </Router>
+    </>
   );
 }
 
