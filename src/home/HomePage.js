@@ -3,6 +3,9 @@ import ReactDOM from 'react-dom';
 import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
 import './HomePage.css';
 // import file from './files/resume.pdf';
+import linkedin_img from './linkedin.png';
+import github_img from './github.png';
+import email_img from './pics/gmail.png';
 
 const HomePage = () => {
   const overviewSectionRef = useRef(null);
@@ -283,15 +286,48 @@ const HomePage = () => {
     );
   };
 
+  const contactSectionRef = useRef(null);
+
+  const handleContactClick = () => {
+    if (contactSectionRef.current) {
+      contactSectionRef.current.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
+  const onLinkedinClick = () => {
+    window.open('https://www.linkedin.com/in/ka-hyun-nam/');
+  };
+
+  const onGithubClick = () => {
+    window.open('https://github.com/kahyunnam');
+  };
+
+  const onGmailClick = () => {
+    window.open('mailto:kahyun.nam12@gmail.com');
+  };
+
   const Contact = () => {
     return (
-      <div id='work-cont'>
-        <div id='work-title'> Contact Information </div>
+      <div id='work-cont' ref={contactSectionRef}>
         <div id='contact-subheader'>
           {' '}
           Please feel welcome to reach out and connect!{' '}
         </div>
-        <div id='contacts-cont'></div>
+        <div id='contacts-cont'>
+          <img src={email_img} alt='email' id='icon' onClick={onGmailClick} />
+          <img
+            src={linkedin_img}
+            alt='linkedin'
+            id='icon'
+            onClick={onLinkedinClick}
+          />
+          <img
+            src={github_img}
+            alt='github'
+            id='icon'
+            onClick={onGithubClick}
+          />
+        </div>
       </div>
     );
   };
@@ -312,7 +348,10 @@ const HomePage = () => {
           {' '}
           Education{' '}
         </p>
-        <p id='navbar-text'> Contact </p>
+        <p id='navbar-text' onClick={handleContactClick}>
+          {' '}
+          Contact{' '}
+        </p>
       </div>
     );
   };
