@@ -6,21 +6,10 @@ import './App.css';
 import './home/HomePage.css';
 
 function App() {
-  const NavBar = () => {
-    return (
-      <div id='navbar-cont'>
-        <p id='navbar-text-1'> About </p>
-        <p id='navbar-text'> Education </p>
-        <p id='navbar-text'> Experience </p>
-        <p id='navbar-text'> Contact </p>
-      </div>
-    );
-  };
-
   return (
     <>
       <header></header>
-      <NavBar />
+      {/* <NavBar /> */}
       <Router>
         <Routes>
           {/* <Route path="/work_experience">
