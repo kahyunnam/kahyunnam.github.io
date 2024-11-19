@@ -143,7 +143,7 @@ const HomePage = () => {
                 <div id='jobskills'> C++ </div>
                 <div id='jobskills'> CUDA </div>
                 <div id='jobskills'> Deep Learning Libraries </div>
-                <div id='jobskills'> Deep Learning Platforms </div>
+                <div id='jobskills'> Deep Learning Operations </div>
               </div>
             </div>
           </div>
@@ -151,7 +151,7 @@ const HomePage = () => {
           <div id='job-cont'>
             <div id='job-title'>
               <p id='company-name'> Uber </p>
-              <p id='dates'> Jan 2024 - May 2024 </p>
+              <p id='dates'> May 2023 - Aug 2023 </p>
             </div>
             <div id='job-desc'>
               <p id='position'> Software Engineer Intern </p>
@@ -166,10 +166,10 @@ const HomePage = () => {
               </p>
               <p id='jobtext'>
                 {' '}
-                This included improvements to existing Java Spring framework,
-                data analysis of existing logic, and added observability into
-                the existing re-dispatch system (a new data pipeline and
-                real-time dashboard).{' '}
+                This included improvements to existing the Java Spring
+                framework, data analysis of existing logic, and added
+                observability into the existing re-dispatch system (a new data
+                pipeline and real-time dashboard).{' '}
               </p>
               <div id='jobskillsbox'>
                 <div id='jobskills'> Java </div>
