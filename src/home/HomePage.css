@@ -480,6 +480,62 @@ body {
   letter-spacing: 0.2px;
 }
 
+/* ---------------------------- projects ------------------ */
+
+#rat-pic-cont {
+  width: 300px;
+  height: 320px;
+  border-radius: 20px;
+  margin: 20px;
+
+  background: url(pics/rat2.png) no-repeat top;
+  background-size: 300px;
+
+  @media (max-width: 700px) {
+    width: 250px;
+    height: 260px;
+    border-radius: 10px;
+
+    background-size: 250px;
+  }
+}
+
+#cv-pic-cont {
+  width: 300px;
+  height: 320px;
+  border-radius: 20px;
+  margin: 20px;
+
+  background: url(pics/cv.png) no-repeat top;
+  background-size: 300px;
+
+  @media (max-width: 700px) {
+    width: 250px;
+    height: 260px;
+    border-radius: 10px;
+
+    background-size: 250px;
+  }
+}
+
+#ln-pic-cont {
+  width: 300px;
+  height: 320px;
+  border-radius: 20px;
+  margin: 20px;
+
+  background: url(pics/ln.png) no-repeat top;
+  background-size: 300px;
+
+  @media (max-width: 700px) {
+    width: 250px;
+    height: 260px;
+    border-radius: 10px;
+
+    background-size: 250px;
+  }
+}
+
 /* ---------------------------- education ------------------ */
 #education-cont {
   float: center;

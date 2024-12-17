@@ -250,6 +250,82 @@ const HomePage = () => {
     );
   };
 
+  const projectSectionRef = useRef(null);
+
+  const handleProjectClick = () => {
+    if (projectSectionRef.current) {
+      projectSectionRef.current.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
+  const Projects = () => {
+    return (
+      <div id='work-cont' ref={projectSectionRef}>
+        <div id='work-title'> Projects </div>
+        <div id='education-cont'>
+          <div id='ln-pic-cont'></div>
+          <div id='education-desc-cont'>
+            <div id='cornell'>
+              Fusible Layer Normalization Operation Patterns
+            </div>
+            <div id='degree'>Summer 2024 Nvidia Internship Project</div>
+            <br />
+            <div id='school-desc-text'>
+              I designed and implemented a new layer normalization (LN) engine
+              for the CUDA Deep Neural Network library, which includes
+              improvements for CPU-side operation fusibility with other
+              pointwise operations when generation a GPU CUDA kernel.
+            </div>
+            <div id='school-desc-text'>
+              A series of LN and pointwise operations (see "Add & Norm" in the
+              left diagram) are commonly used in the transformer model, an
+              important component of most deep learning architectures.
+            </div>
+          </div>
+        </div>
+        <div id='education-cont'>
+          <div id='rat-pic-cont'></div>
+          <div id='education-desc-cont'>
+            <div id='cornell'>Map Data Visualization Project</div>
+            <div id='degree'>
+              Keystone Project for INFO 3300 Visual Data Analytics for the Web
+            </div>
+            <br />
+            <div id='school-desc-text'>
+              During the fall 2023 semester, I collaborated with a group of four
+              students to pitch and develop a project that uses open-source
+              kaggle datasets to visualize a data-based thesis using javascript
+              libraries (such as D3.js).
+            </div>
+            <div id='school-desc-text'>
+              This project visualizes multiple axis of data for accessible user
+              consumption, including different boroughs of nyc, the rat
+              population measured by rat sightings, and average cost of living.
+            </div>
+          </div>
+        </div>
+        <div id='education-cont'>
+          <div id='cv-pic-cont'></div>
+          <div id='education-desc-cont'>
+            <div id='cornell'>Computer Vision Stereo Reconstruction</div>
+            <div id='degree'>Team Project for CS 4670 Computer Vision</div>
+            <br />
+            <div id='school-desc-text'>
+              This team project addressed the challenge of reconstructing an
+              object in a 3D plane using a series of images of the object under
+              different illumination directions. This utilized computer vision
+              algorithms for photometric stereo, plane sweep stereo, and depth
+              map reconstruction.
+            </div>
+            <div id='school-desc-text'>
+              We used python3 and the numpy, scipy, and opencv python libraries.
+            </div>
+          </div>
+        </div>
+      </div>
+    );
+  };
+
   const educationSectionRef = useRef(null);
 
   const handleEducationClick = () => {
@@ -340,6 +416,10 @@ const HomePage = () => {
           Overview{' '}
         </p>
 
+        <p id='navbar-text' onClick={handleProjectClick}>
+          {' '}
+          Projects{' '}
+        </p>
         <p id='navbar-text' onClick={handleWorkExperienceClick}>
           {' '}
           Experience{' '}
@@ -361,6 +441,7 @@ const HomePage = () => {
       <NavBar />
       <Heading />
       <Overview />
+      <Projects />
       <Work />
       <Education />
       <Contact />
